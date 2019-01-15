@@ -1,9 +1,10 @@
 {
   "name": "templates",
   "version": "1.0.0",
-  "description": "React components are mostly written in Javascript ES6+. Older browsers cannot understand this new syntax. So, for older browsers to recognize this code, we need some kind of transformation, called **transpiling**.",
+  "description": "Basic Webpack 4 + Babel 7 template",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   }
 }

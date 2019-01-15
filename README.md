@@ -82,7 +82,7 @@ Add the start script inside `package.json`
 }
 ```
 
-Now you can just run `npm start`. This produces a bundle (un-minified) inside `./dist/main.js`
+~~Now you can just run `npm start`. This produces a bundle (un-minified) inside `./dist/main.js`~~
 
 
 ### Production
