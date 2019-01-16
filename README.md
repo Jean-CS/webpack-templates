@@ -161,7 +161,7 @@ There is no need to set a `<script>` tag manually inside your `index.html` file.
 
 Install the dependencies:
 
-`npm i mini-css-extract-plugin css-loader --save-dev`
+`npm i style-loader css-loader --save-dev`
 
 Next, create a css file for testing:
 
@@ -178,17 +178,11 @@ Configure `webpack.config.js` :
 
 ```javascript
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
     filename: "./index.html"
 });
-
-const cssPlugin = new MiniCssExtractPlugin({
-    filename: "[name].css",
-    chunkFilename: "[id].css"
-})
 
 module.exports = {
   module: {
@@ -211,11 +205,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
-  plugins: [ htmlPlugin, cssPlugin ]
+  plugins: [ htmlPlugin, ]
 };
 ```
 
