@@ -7,6 +7,7 @@ Webpack doesn't know how to transform ES6+ into ES5, but it has a concept called
 `babel-loader` is the webpack loader responsible for transpiling your javascript code into your list of supported browsers. Obviously, this used Babel. And Babel must be configured with some presets:
 
 1. `babel-preset-env` for transpiling ES6+ down to ES5
+2. `babel-preset-react` for compiling JSX and other stuff to vanilla Javascript
 
 > Webpack 4 does not need a configuration file by default. There is no need to define neither the entry point, nor the output file. Webpack 4 takes `./src/index.js` as the default entry point. And it will spit out the bundle in `./dist/main.js`
 
@@ -23,13 +24,16 @@ Next, add the webpack command inside `package.json`
 
 ## Install Babel
 
-`npm i @babel/core babel-loader @babel/preset-env --save-dev`
+`npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev`
 
 Create a new file named `.babelrc` inside the project root folder
 
 ```javascript
 {
-  "presets": ["@babel/preset-env"]
+  "presets": [
+    "@babel/preset-env", 
+    "@babel/preset-react",
+  ]
 }
 ```
 
