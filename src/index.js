@@ -1,7 +1,8 @@
-import style from "./main.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const arr = [1,2,3,4]
+import styles from './main.css';
 
-const newArr = [...arr, 5]
+const title = "Simple Webpack / Babel template";
 
-console.log(newArr)
+ReactDOM.render(<div>{title}</div>, document.getElementById('root'));
