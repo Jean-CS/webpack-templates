@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 
 import styles from './main.css';
 
-const title = "Simple Webpack / Babel template";
+import App from './App';
 
-ReactDOM.render(<div>{title}</div>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
